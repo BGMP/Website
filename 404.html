@@ -1,11 +1,8 @@
 ---
-layout: none
 title: Not Found
 ---
 
 <html lang="en">
-
-{% include head.html %}
 
 <style>
     .jumbotron {
@@ -22,19 +19,15 @@ title: Not Found
 
 <body>
 
-{% include nav.html %}
-
 <!-- Fixes a set amount of 34px from the navbar down, otherwise, content would be squashed by it -->
 <div class="flash" style="margin-top: 34px;">
 </div>
 
 <div class="container" style="background-size: 100%">
     <div class="jumbotron p-3 p-md-6 text-error rounded bg-dark" style="background-size: 100% 263px;">
-        <h1 style="margin-left: 20px; font-size: 80px;" class="display-4"><b>Error 404</b></h1>
-        <p style="margin-left: 20px" class="lead my-2 display-5"><b>Page not found :(</b></p>
+        <h1 style="margin-left: 20px; font-size: 80px;" class="display-4"><b>{% t error.404.title %}</b></h1>
+        <p style="margin-left: 20px" class="lead my-2 display-5"><b>{% t error.404.caption %}</b></p>
     </div>
 </div>
 
 </body>
-
-{% include footer.html %}

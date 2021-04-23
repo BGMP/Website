@@ -7,6 +7,18 @@ description: >-
 encoding: utf-8
 markdown: kramdown
 
+languages: ["en_us", "en_gb", "es_es"]
+exclude_from_localizations: ["assets", "CNAME", "README.md", "LICENCE.md"]
+defaultLang: en_us
+languageNames:
+  en_us: English, US
+  en_gb: English, UK
+  es_es: Español
+languagePaths:
+  en_us: ""
+  en_gb: "en_gb"
+  es_es: "es_es"
+
 sass:
   sass_dir: assets/css
 
@@ -33,9 +45,14 @@ defaults:
       path: emoji/unicode
     values:
       emoji: true
+  - scope:
+      path: assets/img/i18n
+    values:
+      locale_flag: true
 
 emoji:
   src: "https://re-volt-america.github.io/Website" # /emoji/unicode
 
 plugins:
+  - jekyll-multiple-languages-plugin
   - jemoji
